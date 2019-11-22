@@ -9,8 +9,23 @@
   </head>
   <body>
     <header>
-      <h1>jjjjjj</h1>
+      <h1>foodify</h1>
     </header>
+
+    <form id="mainForm" action="submit">
+      <input id="searchInput" type="text" />
+      <select name="results" id="resultsNumber">
+        <option value="5">5</option>
+        <option value="10" selected>10</option>
+        <option value="15">15</option>
+        <option value="25">25</option>
+      </select>
+      <button>Search</button>
+    </form>
+
+    <section>
+      <ul id="resultsList"></ul>
+    </section>
 
     <script src="dist/bundle.js"></script>
   </body>
