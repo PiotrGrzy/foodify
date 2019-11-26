@@ -4,3 +4,29 @@
 h1{color:yellow}
 >>>>>>> Stashed changes
 /*# sourceMappingURL=style.css.map */
+.footer
+{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center ;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+a.footerlink
+{
+    color: white;
+    text-decoration: none; 
+}
+.big-banner{
+    background-image: url('../img/background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    size: 100%;
+    
+}
+.bgli{
+    background-color: #91c97b7e;
+}

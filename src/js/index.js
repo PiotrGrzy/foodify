@@ -36,3 +36,11 @@ const onSubmit = async e => {
 };
 searchForm.addEventListener("submit", onSubmit);
 console.log("connected");
+var menuIcon = document.querySelector('.menu-icon');
+var nav = document.querySelector('.nav');
+ 
+menuIcon.addEventListener('click', function(){
+  nav.classList.toggle('nav-active');
+  });
+
+  
