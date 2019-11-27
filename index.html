@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>foodify- best recipes</title>
+  <title>foodify - best recipes</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -14,21 +14,10 @@
 <body class="jumbotron big-banner jumbotron-fluid p-0">
   <header class="sticky-top">
     <nav class="navbar navbar-light bg-warning">
-      <a href="#top" navbar-brand style="text-decoration:none;color:#000000">
-        <h1 class="h1 font-weight-bold text-lowercase display-none">foodify - best recipes</h1>
-      </a>
-
-      </form>
-    </nav>
-  </header>
-
-  <main>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 p-5">
-          <form class="form-inline d-flex align-items-center p-5" id="mainForm" action="submit">
-            <input id="searchInput" type="text" class="form-control mr-sm-2 border border-success" type="search"
-              placeholder="find your recipe" aria-label="Search">
+      <a href="index.html" navbar-brand style="text-decoration:none;color:#000000">
+        <h1 class="h1 font-weight-bold text-lowercase text-dark">foodify - best recipes</h1></a>
+      <form class="form-inline" id="mainForm" action="submit">
+            <input id="searchInput" type="text" class="form-control mr-sm-2 border border-success" type="search" placeholder="find your recipe" aria-label="Search">
             <select class="custom-select border border-success mr-1" name="results" id="resultsNumber">
               <option value="5">5</option>
               <option value="10" selected>10</option>
@@ -36,15 +25,20 @@
               <option value="25">25</option>
             </select>
             <button class="btn my-2 my-sm-0 bg-light text-dark border border-success" type="submit">find</button>
+
+        </form>
+      </nav>
+    </header>
+
+  <main>
+    <div class="container">
+      <div class="row p-1">
+          <section class="col-lg-4 text-center font-weight-bold text-lowercase">
+            <ul id="resultsList" class="list-unstyled bgli"></ul>
+          </section>
+          <div id="recipeBox" class="col-lg-8 font-weight-bold bgli p-5">
+          </div>
         </div>
-
-        <section class="col-lg-4 p-0 text-center font-weight-bold text-lowercase p-1">
-          <ul id="resultsList" class="list-unstyled bgli"></ul>
-          <div id="recipeBox"></div>
-        </section>
-
-      </div>
-    </div>
     </div>
 
   </main>
@@ -53,7 +47,6 @@
     <a href="mailto:tomzio@icloud.com" class="footerlink">tomzio@icloud.com</a>
     <a href="mailto:piotr.grzymowicz1@gmail.com" class="footerlink">piotr.grzymowicz1@gmail.com</a>
   </footer>
-  </div>
   <script src="dist/bundle.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
