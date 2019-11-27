@@ -1,37 +1,39 @@
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-.header{width:100%}
-=======
-h1{color:yellow}
->>>>>>> Stashed changes
+h1 {
+  color: yellow;
+}
+
 /*# sourceMappingURL=style.css.map */
-.footer
-{
-    display: flex;
-    align-items: flex-end;
-    justify-content: center ;
-    width: 100%;
-    margin: auto;
-    text-align: center;
+.footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+  text-align: center;
 }
-a.footerlink
-{
-    color: white;
-    text-decoration: none; 
+a.footerlink {
+  color: white;
+  text-decoration: none;
 }
-.big-banner{
-    background-image: url('../img/background.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    size: 100%;
-    
+.big-banner {
+  background-image: url("../img/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  /* size: 100%; */
 }
-.bgli{
-    background-color: #91c97b7e;
+.bgli {
+  background-color: #91c97b7e;
 }
-=======
-.header{width:100%}#main{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
+
+.header {
+  width: 100%;
+}
+#main {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
 /*# sourceMappingURL=style.css.map */
->>>>>>> master

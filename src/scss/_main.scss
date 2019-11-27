@@ -1,18 +1,11 @@
-<<<<<<< HEAD
 @mixin bg-variant($parent, $color) {
-    #{$parent} {
-      background-color: $color;
-    }
-    a#{$parent},
-    button#{$parent} {
-      @include hover-focus {
-        background-color: darken($color, 10%);
-      }
+  #{$parent} {
+    background-color: $color;
+  }
+  a#{$parent},
+  button#{$parent} {
+    @include hover-focus {
+      background-color: darken($color, 10%);
     }
   }
-  
-=======
-#main {
-  display: flex;
 }
->>>>>>> master

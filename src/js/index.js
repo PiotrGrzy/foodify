@@ -26,10 +26,6 @@ const getRecipes = async () => {
 };
 
 const getRecipe = async id => {
-  // fetch single recipe
-
-  // pass recipe to view
-
   try {
     const response = await fetch(
       `https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}&includeNutrition=false`
@@ -48,6 +44,7 @@ const onSubmit = async e => {
     searchQuery = searchInput.value;
     numberOfResults = resultsNumberSelect.value;
     results = await getRecipes();
+    console.log(results);
     viewRecipes(results);
     searchInput.value = "";
   }
@@ -62,15 +59,10 @@ const onListClick = async e => {
 
 resultsList.addEventListener("click", onListClick);
 searchForm.addEventListener("submit", onSubmit);
-<<<<<<< HEAD
-console.log("connected");
-var menuIcon = document.querySelector('.menu-icon');
-var nav = document.querySelector('.nav');
- 
-menuIcon.addEventListener('click', function(){
-  nav.classList.toggle('nav-active');
-  });
 
-  
-=======
->>>>>>> master
+const menuIcon = document.querySelector(".menu-icon");
+const nav = document.querySelector(".nav");
+
+// menuIcon.addEventListener("click", function() {
+//   nav.classList.toggle("nav-active");
+// });
