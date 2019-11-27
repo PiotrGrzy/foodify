@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @mixin bg-variant($parent, $color) {
     #{$parent} {
       background-color: $color;
@@ -10,3 +11,8 @@
     }
   }
   
+=======
+#main {
+  display: flex;
+}
+>>>>>>> master

@@ -1,10 +1,14 @@
 {
     "version": 3,
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     "mappings": "ACAA,AAAA,OAAO,AAAC,CACN,KAAK,CAAE,IAAI,CAOZ",
 =======
     "mappings": "AAAA,AAAA,EAAE,AAAC,CACD,KAAK,CAAE,MAAM,CACd",
 >>>>>>> Stashed changes
+=======
+    "mappings": "ACAA,AAAA,OAAO,AAAC,CACN,KAAK,CAAE,IAAI,CAOZ,ACRD,AAAA,KAAK,AAAC,CACJ,OAAO,CAAE,IAAI,CACd",
+>>>>>>> master
     "sources": [
         "../src/scss/style.scss",
         "../src/scss/_header.scss",
