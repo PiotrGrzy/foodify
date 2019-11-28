@@ -1,6 +1,6 @@
 import "@babel/polyfill";
 import viewRecipes from "./viewRecipes";
-import viewRecipe from "./viewRecipe";
+import viewRecipe, { clearRecipeView } from "./viewRecipe";
 
 const apiKey = "341d33626f6f4b33a6b63ab33d23cb72";
 let searchQuery = "";
@@ -18,7 +18,6 @@ const getRecipes = async () => {
       `https://api.spoonacular.com/recipes/search?apiKey=${apiKey}&query=${searchQuery}&number=${numberOfResults}`
     );
     const data = await response.json();
-    console.log(data.results);
     return data.results;
   } catch (err) {
     err => console.log(err);
@@ -31,7 +30,6 @@ const getRecipe = async id => {
       `https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}&includeNutrition=false`
     );
     const data = await response.json();
-    console.log(data);
     return data;
   } catch (err) {
     err => console.log(err);
@@ -44,8 +42,9 @@ const onSubmit = async e => {
     searchQuery = searchInput.value;
     numberOfResults = resultsNumberSelect.value;
     results = await getRecipes();
-    console.log(results);
+
     viewRecipes(results);
+    clearRecipeView();
     searchInput.value = "";
   }
 };
@@ -60,10 +59,3 @@ const onListClick = async e => {
 
 resultsList.addEventListener("click", onListClick);
 searchForm.addEventListener("submit", onSubmit);
-
-// const menuIcon = document.querySelector(".menu-icon");
-// const nav = document.querySelector(".nav");
-
-// menuIcon.addEventListener("click", function() {
-//   nav.classList.toggle("nav-active");
-// });

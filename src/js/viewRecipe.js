@@ -1,6 +1,13 @@
+const recipeBox = document.querySelector("#recipeBox");
+
+export const clearRecipeView = () => {
+  recipeBox.innerHTML = "";
+  recipeBox.classList.remove("main__single-recipe");
+};
+
 const viewRecipe = recipe => {
-  const recipeBox = document.querySelector("#recipeBox");
   recipeBox.classList.add("main__single-recipe");
+
   if (recipe) {
     const ingredients = recipe.extendedIngredients
       .map(
@@ -25,47 +32,20 @@ const viewRecipe = recipe => {
     }
 
     const tags = `<p>
-      ${
-        recipe.glutenFree
-          ? "<span class='badge badge-success m-1 p-1'>Gluten Free</span>"
-          : ""
-      }
-      ${
-        recipe.cheap
-          ? "<span class='badge badge-success m-1 p-1'>Cheap</span>"
-          : ""
-      }
-      ${
-        recipe.ketogenic
-          ? "<span class='badge badge-success m-1 p-1'>Ketogenic</span>"
-          : ""
-      }
-      ${
-        recipe.vegan
-          ? "<span class='badge badge-success m-1 p-1'>Vegen</span>"
-          : ""
-      }
-      ${
-        recipe.vegetarian
-          ? "<span class='badge badge-success m-1 p-1'>Vegetarian</span>"
-          : ""
-      }
-      ${
-        recipe.veryHealthy
-          ? "<span class='badge badge-success m-1 p-1'>Very Healthy</span>"
-          : ""
-      }
-      ${
-        recipe.veryPopular
-          ? "<span class='badge badge-success m-1 p-1'>Very Popular</span>"
-          : ""
-      }
+      ${recipe.glutenFree ? "<span class='main__tag'>Gluten Free</span>" : ""}
+      ${recipe.cheap ? "<span class='main__tag'>Cheap</span>" : ""}
+      ${recipe.ketogenic ? "<span class='main__tag'>Ketogenic</span>" : ""}
+      ${recipe.vegan ? "<span class='main__tag'>Vegen</span>" : ""}
+      ${recipe.vegetarian ? "<span class='main__tag'>Vegetarian</span>" : ""}
+      ${recipe.veryHealthy ? "<span class='main__tag'>Very Healthy</span>" : ""}
+      ${recipe.veryPopular ? "<span class='main__tag'>Very Popular</span>" : ""}
       </p>`;
 
     let link = "";
+
     if (recipe.sourceName) {
       link = `
-    <p>Original post: <a href=${recipe.sourceUrl} target="_blank">${recipe.sourceName}</a><p/>
+    <p class="main__link">Original post: <a href=${recipe.sourceUrl} target="_blank">${recipe.sourceName}</a><p/>
       `;
     }
 
@@ -73,21 +53,18 @@ const viewRecipe = recipe => {
         <img src=${recipe.image}
           alt="Meal photo"
         />
-        <p>${recipe.title}</p>
+        <h3>${recipe.title}</h3>
       ${tags}
         <h5>Ingredients:</h5>
-        <ul>
+        <ul class='main__ingredients'>
             ${ingredients}
         </ul>
-        <hr/>
-        <span>Preparation Time: ${recipe.preparationMinutes} mins </span> <span>Servings: ${recipe.servings} </span>
+       <span>Preparation Time: ${recipe.preparationMinutes} mins </span> <span>Servings: ${recipe.servings} </span>
         <h5>How to prepare:</h5>
-        <ol>
+        <ol class='main__steps'>
             ${preparation}
         </ol>
-        ${link}
-        
-`;
+        ${link}`;
     recipeBox.innerHTML = html;
   }
 };

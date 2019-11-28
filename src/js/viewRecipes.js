@@ -1,5 +1,4 @@
 const viewRecipes = recipes => {
-  console.log("viewRecipes wywolane z index.js ");
   const resultsList = document.querySelector("#resultsList");
   resultsList.classList.add("main__list");
 
@@ -10,7 +9,7 @@ const viewRecipes = recipes => {
    <img src="https://spoonacular.com/recipeImages/${recipe.id}-240x150.jpg"/>
    <div class="main__info">
    <p>${recipe.title}</p>
-   <p><span>Servings:${recipe.servings} </span> <span>Ready in:${recipe.readyInMinutes} mins </span><p/>
+   <p><span>Servings: ${recipe.servings} </span> <span>Ready in: ${recipe.readyInMinutes} mins </span><p/>
    </div>
    </li>
    

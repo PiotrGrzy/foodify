@@ -1,145 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>foodify - best recipes</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico|Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>foodify - best recipes</title>
-  <link href="https://fonts.googleapis.com/css?family=Pacifico|Montserrat&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
-</head>
+  <body>
+    <header class="header">
+      <h1 class="header__title">Foodify</h1>
+      <form id="mainForm" class="header__form" action="submit">
+        <input
+          id="searchInput"
+          type="text"
+          class="header__input"
+          type="search"
+          placeholder="find your recipe"
+          aria-label="Search"
+        />
+        <select class="header__select" name="results" id="resultsNumber">
+          <option value="5">5</option>
+          <option value="10" selected>10</option>
+          <option value="15">15</option>
+          <option value="25">25</option>
+        </select>
+        <button class="header__btn" type="submit">Find recipes</button>
+      </form>
+    </header>
 
-<body>
-  <header class="header">
-    <h1 class="header__title">Foodify </h1>
-    <form id="mainForm" class="header__form" action="submit">
-      <input id="searchInput" type="text" class="header__input" type="search" placeholder="find your recipe"
-        aria-label="Search">
-      <select class="header__select" name="results" id="resultsNumber">
-        <option value="5">5</option>
-        <option value="10" selected>10</option>
-        <option value="15">15</option>
-        <option value="25">25</option>
-      </select>
-      <button class="header__btn" type="submit">Find recipes</button>
-    </form>
+    <main class="main">
+      <div>
+        <ul id="resultsList"></ul>
+      </div>
 
-  </header>
+      <div id="recipeBox"></div>
+    </main>
+    <footer class="footer">
+      <span
+        >Designed with
+        <a
+          class="footer__link"
+          href="https://spoonacular.com/food-api"
+          target="_blank"
+          >Spoonacular API</a
+        ></span
+      >
+      <span>2019 &copy Piotr Grzymowicz & Tomasz Ziółkowski</span>
+      <a href="mailto:tomzio@icloud.com" class="footer__link"
+        >tomzio@icloud.com</a
+      >
+      <a href="mailto:piotr.grzymowicz1@gmail.com" class="footer__link"
+        >piotr.grzymowicz1@gmail.com</a
+      >
+    </footer>
 
-
-
-  <main class="main">
-    <div>
-      <ul id="resultsList" class="main__list">
-        <li data-id="559251" class="main__list-item">
-          <img src="https://spoonacular.com/recipeImages/559251-240x150.jpg">
-          <div class="main__info">
-            <p>Breakfast Pizza</p>
-            <p><span>Servings:6 </span> <span>Ready in:25 mins </span></p>
-          </div>
-        </li>
-
-
-        <li data-id="630293" class="main__list-item">
-          <img src="https://spoonacular.com/recipeImages/630293-240x150.jpg">
-          <div class="main__info">
-            <p>Egg &amp; rocket pizzas</p>
-            <p><span>Servings:2 </span> <span>Ready in:30 mins </span></p>
-          </div>
-        </li>
-
-
-        <li data-id="601651" class="main__list-item">
-          <img src="https://spoonacular.com/recipeImages/601651-240x150.jpg">
-          <p>Fruit Pizza</p>
-          <p><span>Servings:8 </span> <span>Ready in:90 mins </span></p>
-          <p>
-          </p>
-        </li>
-
-
-        <li data-id="496972" class="main__list-item">
-          <img src="https://spoonacular.com/recipeImages/496972-240x150.jpg">
-          <p>Ricotta Pizza with Prosciutto and Fresh Pea Salad</p>
-          <p><span>Servings:6 </span> <span>Ready in:30 mins </span></p>
-          <p>
-          </p>
-        </li>
-
-
-        <li data-id="223993" class="main__list-item">
-          <img src="https://spoonacular.com/recipeImages/223993-240x150.jpg">
-          <p>Easy tomato pizzas</p>
-          <p><span>Servings:8 </span> <span>Ready in:90 mins </span></p>
-          <p>
-          </p>
-        </li>
-
-
-        <li data-id="481601" class="main__list-item">
-          <img src="https://spoonacular.com/recipeImages/481601-240x150.jpg">
-          <p>Neapolitan Pizza and Honey Whole Wheat Dough</p>
-          <p><span>Servings:8 </span> <span>Ready in:102 mins </span></p>
-          <p>
-          </p>
-        </li>
-
-
-        <li data-id="222869" class="main__list-item">
-          <img src="https://spoonacular.com/recipeImages/222869-240x150.jpg">
-          <p>Pizza puff pinwheels</p>
-          <p><span>Servings:12 </span> <span>Ready in:35 mins </span></p>
-          <p>
-          </p>
-        </li>
-
-
-        <li data-id="225711" class="main__list-item">
-          <img src="https://spoonacular.com/recipeImages/225711-240x150.jpg">
-          <p>Tuna, olive &amp; rocket pizzas</p>
-          <p><span>Servings:2 </span> <span>Ready in:27 mins </span></p>
-          <p>
-          </p>
-        </li>
-
-
-        <li data-id="209785" class="main__list-item">
-          <img src="https://spoonacular.com/recipeImages/209785-240x150.jpg">
-          <p>No-oven pizza</p>
-          <p><span>Servings:4 </span> <span>Ready in:40 mins </span></p>
-          <p>
-          </p>
-        </li>
-
-
-        <li data-id="209875" class="main__list-item">
-          <img src="https://spoonacular.com/recipeImages/209875-240x150.jpg">
-          <p>Very simple Margherita pizza</p>
-          <p><span>Servings:2 </span> <span>Ready in:35 mins </span></p>
-          <p>
-          </p>
-        </li>
-
-      </ul>
-
-
-    </div>
-
-    <div id="recipeBox" class="main__single-recipe">
-    </div>
-
-  </main>
-  <footer class="footer">
-    <span>2019 &copy Piotr Grzymowicz & Tomasz Ziółkowski</span>
-    <a href="mailto:tomzio@icloud.com" class="footer__link">tomzio@icloud.com</a>
-    <a href="mailto:piotr.grzymowicz1@gmail.com" class="footer__link">piotr.grzymowicz1@gmail.com</a>
-  </footer>
-
-
-
-  <script src="dist/bundle.js"></script>
-
-</body>
-
+    <script src="dist/bundle.js"></script>
+  </body>
 </html>
