@@ -1,11 +1,68 @@
-@mixin bg-variant($parent, $color) {
-  #{$parent} {
-    background-color: $color;
+.main {
+  display: flex;
+  width: 90vw;
+  margin: 2rem auto;
+  &__list,
+  &__single-recipe {
+    background-color: $color-light;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 2rem;
   }
-  a#{$parent},
-  button#{$parent} {
-    @include hover-focus {
-      background-color: darken($color, 10%);
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__list-item {
+    cursor: pointer;
+    position: relative;
+    max-width: 27rem;
+    margin: 1rem;
+    margin-bottom: 1rem;
+    //padding: 1rem;
+    background-color: rgb(172, 172, 172);
+    box-shadow: 1px 1px 15px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s;
+    border-radius: 5px;
+    overflow-y: hidden;
+
+    img {
+      display: block;
+      border-radius: 5px;
     }
+  }
+
+  &__info {
+    position: absolute;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 2rem;
+    font-family: $font-prim;
+    text-align: center;
+
+    transform: translateY(100%);
+    transition: all 0.2s;
+
+    span {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__list-item:hover .main__info {
+    transform: translateY(0);
+  }
+
+  &__list-item:hover {
+    box-shadow: 0px 0px 15px 13px rgba(100, 100, 100, 0.8);
+  }
+
+  &__single-recipe {
   }
 }

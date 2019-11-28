@@ -1,0 +1,13 @@
+.footer {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.4rem;
+  padding: 1rem;
+  background-color: $color-dark;
+  color: rgb(177, 176, 176);
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+  }
+}

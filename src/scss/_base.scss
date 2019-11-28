@@ -1,0 +1,34 @@
+$font-prim: "Montserrat", sans-serif;
+$font-sec: "Pacifico", cursive;
+
+$color-dark: rgb(43, 43, 43);
+$color-light: rgb(240, 240, 240);
+
+$shadow: 0 0 5px 10px rgba(0, 0, 0, 0.2);
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; //1rem
+}
+
+body {
+  background: url("https://blackrockdigital.github.io/startbootstrap-new-age/img/bg-pattern.png"),
+    linear-gradient(to left, #7b4397, #dc2430);
+  background-color: rgba(0, 0, 0, 0);
+  background-position-x: 0%, 0%;
+  background-position-y: 0%, 0%;
+  background-repeat: repeat, repeat;
+  background-attachment: scroll, scroll;
+  background-image: url("https://blackrockdigital.github.io/startbootstrap-new-age/img/bg-pattern.png"),
+    linear-gradient(to left, rgb(123, 67, 151), rgb(220, 36, 48));
+  background-size: auto, auto;
+  background-origin: padding-box, padding-box;
+  background-clip: border-box, border-box;
+}

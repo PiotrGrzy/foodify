@@ -61,8 +61,8 @@ const onListClick = async e => {
 resultsList.addEventListener("click", onListClick);
 searchForm.addEventListener("submit", onSubmit);
 
-const menuIcon = document.querySelector(".menu-icon");
-const nav = document.querySelector(".nav");
+// const menuIcon = document.querySelector(".menu-icon");
+// const nav = document.querySelector(".nav");
 
 // menuIcon.addEventListener("click", function() {
 //   nav.classList.toggle("nav-active");

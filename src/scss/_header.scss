@@ -1,10 +1,41 @@
 .header {
-  width: 100%;
-
-  &__logo {
-  }
+  background-color: rgb(240, 240, 240);
+  color: $color-dark;
+  padding: 2rem 6rem;
+  box-shadow: $shadow;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
 
   &__title {
-  
+    font-size: 4.8rem;
+    font-family: $font-sec;
+  }
+
+  &__form {
+    display: flex;
+  }
+
+  &__input,
+  &__select,
+  &__btn {
+    border: none;
+    font-size: 2rem;
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid rgb(137, 91, 154);
+    border-radius: 10px;
+  }
+
+  &__input {
+    width: 50rem;
+  }
+
+  &__btn {
+    cursor: pointer;
+  }
+
+  &__btn:hover {
+    background-color: #ffffff;
   }
 }

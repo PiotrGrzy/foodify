@@ -1,6 +1,6 @@
 const viewRecipe = recipe => {
   const recipeBox = document.querySelector("#recipeBox");
-  recipeBox.classList.add("col-lg-8", "font-weight-bold", "bgli", "p-5");
+  recipeBox.classList.add("main__single-recipe");
   if (recipe) {
     const ingredients = recipe.extendedIngredients
       .map(
