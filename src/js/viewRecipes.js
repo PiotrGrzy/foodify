@@ -1,6 +1,7 @@
 const viewRecipes = recipes => {
   console.log("viewRecipes wywolane z index.js ");
   const resultsList = document.querySelector("#resultsList");
+  resultsList.classList.add("list-unstyled", "bgli", "py-5");
 
   const html = recipes
     .map(recipe => {

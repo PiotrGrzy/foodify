@@ -51,10 +51,11 @@ const onSubmit = async e => {
 };
 
 const onListClick = async e => {
-  console.log(e.target.closest("li").dataset.id);
-  const recipeId = e.target.closest("li").dataset.id;
-  const recipe = await getRecipe(recipeId);
-  viewRecipe(recipe);
+  if (e.target.closest("li").tagName === "LI") {
+    const recipeId = e.target.closest("li").dataset.id;
+    const recipe = await getRecipe(recipeId);
+    viewRecipe(recipe);
+  }
 };
 
 resultsList.addEventListener("click", onListClick);

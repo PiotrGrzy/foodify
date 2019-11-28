@@ -1,6 +1,6 @@
-const recipeBox = document.querySelector("#recipeBox");
-
 const viewRecipe = recipe => {
+  const recipeBox = document.querySelector("#recipeBox");
+  recipeBox.classList.add("col-lg-8", "font-weight-bold", "bgli", "p-5");
   if (recipe) {
     const ingredients = recipe.extendedIngredients
       .map(
@@ -24,14 +24,42 @@ const viewRecipe = recipe => {
       preparation = "Sorry we have no instruction for this one :(";
     }
 
-    const tags = `<p>Tags:
-      ${recipe.glutenFree ? "<span>Gluten Free<span/>" : ""}
-      ${recipe.cheap ? "<span>Cheap<span/>" : ""}
-      ${recipe.ketogenic ? "<span>Ketogenic<span/>" : ""}
-      ${recipe.vegan ? "<span>Vegen<span/>" : ""}
-      ${recipe.vegetarian ? "<span>Vegetarian<span/>" : ""}
-      ${recipe.veryHealthy ? "<span>Very Healthy<span/>" : ""}
-      ${recipe.veryPopular ? "<span>Very Popular<span/>" : ""}
+    const tags = `<p>
+      ${
+        recipe.glutenFree
+          ? "<span class='badge badge-success m-1 p-1'>Gluten Free</span>"
+          : ""
+      }
+      ${
+        recipe.cheap
+          ? "<span class='badge badge-success m-1 p-1'>Cheap</span>"
+          : ""
+      }
+      ${
+        recipe.ketogenic
+          ? "<span class='badge badge-success m-1 p-1'>Ketogenic</span>"
+          : ""
+      }
+      ${
+        recipe.vegan
+          ? "<span class='badge badge-success m-1 p-1'>Vegen</span>"
+          : ""
+      }
+      ${
+        recipe.vegetarian
+          ? "<span class='badge badge-success m-1 p-1'>Vegetarian</span>"
+          : ""
+      }
+      ${
+        recipe.veryHealthy
+          ? "<span class='badge badge-success m-1 p-1'>Very Healthy</span>"
+          : ""
+      }
+      ${
+        recipe.veryPopular
+          ? "<span class='badge badge-success m-1 p-1'>Very Popular</span>"
+          : ""
+      }
       </p>`;
 
     let link = "";

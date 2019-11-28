@@ -15,38 +15,41 @@
   <header class="sticky-top">
     <nav class="navbar navbar-light bg-warning">
       <a href="index.html" navbar-brand style="text-decoration:none;color:#000000">
-        <h1 class="h1 font-weight-bold text-lowercase text-dark">foodify - best recipes</h1></a>
+        <h1 class="h1 font-weight-bold text-lowercase text-dark">foodify - best recipes</h1>
+      </a>
       <form class="form-inline" id="mainForm" action="submit">
-            <input id="searchInput" type="text" class="form-control mr-sm-2 border border-success" type="search" placeholder="find your recipe" aria-label="Search">
-            <select class="custom-select border border-success mr-1" name="results" id="resultsNumber">
-              <option value="5">5</option>
-              <option value="10" selected>10</option>
-              <option value="15">15</option>
-              <option value="25">25</option>
-            </select>
-            <button class="btn my-2 my-sm-0 bg-light text-dark border border-success" type="submit">find</button>
+        <input id="searchInput" type="text" class="form-control mr-sm-2 border border-success" type="search"
+          placeholder="find your recipe" aria-label="Search">
+        <select class="custom-select border border-success mr-1" name="results" id="resultsNumber">
+          <option value="5">5</option>
+          <option value="10" selected>10</option>
+          <option value="15">15</option>
+          <option value="25">25</option>
+        </select>
+        <button class="btn my-2 my-sm-0 bg-light text-dark border border-success" type="submit">find</button>
 
-        </form>
-      </nav>
-    </header>
+      </form>
+    </nav>
+  </header>
 
   <main>
     <div class="container">
       <div class="row p-1">
-          <section class="col-lg-4 text-center font-weight-bold text-lowercase">
-            <ul id="resultsList" class="list-unstyled bgli"></ul>
-          </section>
-          <div id="recipeBox" class="col-lg-8 font-weight-bold bgli p-5">
-          </div>
+        <section class="col-lg-4 text-center font-weight-bold text-lowercase">
+          <ul id="resultsList"></ul>
+        </section>
+        <div id="recipeBox">
         </div>
+      </div>
     </div>
 
   </main>
   <footer class="footer text-light text-center fixed-bottom">
-    2019 &copy Piotr Grzymowicz & Tomasz Ziółkowski
+    <span>2019 &copy Piotr Grzymowicz & Tomasz Ziółkowski</span>
     <a href="mailto:tomzio@icloud.com" class="footerlink">tomzio@icloud.com</a>
     <a href="mailto:piotr.grzymowicz1@gmail.com" class="footerlink">piotr.grzymowicz1@gmail.com</a>
   </footer>
+
   <script src="dist/bundle.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
