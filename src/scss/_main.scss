@@ -2,26 +2,41 @@
   display: flex;
   width: 90vw;
   margin: 2rem auto;
+  justify-content: center;
+
+  @media screen and (max-width: "620px") {
+    flex-direction: column;
+    align-items: center;
+  }
 
   &__list,
-  &__single-recipe {
+  &__single-recipe,
+  &__details {
     background-color: $color-light;
     box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     padding: 2rem;
+
+    @media screen and (max-width: "620px") {
+      flex-direction: column;
+      width: 90vw;
+      max-width: none;
+      margin-bottom: 4rem;
+    }
   }
 
   &__list {
     list-style: none;
     max-height: 220vh;
     overflow: scroll;
+    justify-self: flex-start;
   }
 
   &__list-item {
     cursor: pointer;
     position: relative;
     max-width: 24rem;
-    margin: 1rem;
+    margin: 1rem auto;
     margin-bottom: 1rem;
 
     background-color: rgb(172, 172, 172);
@@ -33,6 +48,7 @@
     img {
       display: block;
       border-radius: 5px;
+      margin: 0 auto;
     }
   }
 
@@ -74,6 +90,14 @@
     img {
       display: block;
       margin: 0 auto;
+      @media screen and (max-width: "1140px") {
+        width: 50rem;
+        height: auto;
+      }
+      @media screen and (max-width: "900px") {
+        width: 40rem;
+        height: auto;
+      }
     }
 
     h3 {
@@ -115,5 +139,55 @@
       text-decoration: none;
       color: #ae2a4b;
     }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    font-family: $font-prim;
+    margin-left: 2rem;
+    max-width: 27rem;
+    font-size: 1.6rem;
+
+    h5 {
+      font-size: 2.2rem;
+      color: #ae2a4b;
+      margin: 1rem 0;
+    }
+  }
+
+  &__bars {
+    list-style: none;
+  }
+
+  &__nutrients {
+    list-style-type: square;
+    list-style-position: inside;
+    line-height: 3rem;
+  }
+}
+
+.bar-container {
+  display: block;
+  background-color: $color-light;
+  border-radius: 1rem;
+}
+
+.bar-inner {
+  display: block;
+  color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: -3px 5px 7px 0px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  &--1 {
+    background-color: rgb(27, 41, 78);
+  }
+  &--2 {
+    background-color: rgb(221, 44, 74);
+  }
+  &--3 {
+    background-color: rgb(201, 223, 11);
   }
 }

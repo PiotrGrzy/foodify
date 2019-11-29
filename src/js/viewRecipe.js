@@ -1,3 +1,5 @@
+import viewNutritions from "./viewNutritions";
+
 const recipeBox = document.querySelector("#recipeBox");
 
 export const clearRecipeView = () => {
@@ -7,7 +9,6 @@ export const clearRecipeView = () => {
 
 const viewRecipe = recipe => {
   recipeBox.classList.add("main__single-recipe");
-
   if (recipe) {
     const ingredients = recipe.extendedIngredients
       .map(
@@ -59,13 +60,15 @@ const viewRecipe = recipe => {
         <ul class='main__ingredients'>
             ${ingredients}
         </ul>
-       <span>Preparation Time: ${recipe.preparationMinutes} mins </span> <span>Servings: ${recipe.servings} </span>
         <h5>How to prepare:</h5>
         <ol class='main__steps'>
             ${preparation}
         </ol>
-        ${link}`;
+        ${link}
+        <button class="main__getNutritionBtn"></button>
+        `;
     recipeBox.innerHTML = html;
+    viewNutritions(recipe.nutrition);
   }
 };
 

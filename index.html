@@ -1,65 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>foodify - best recipes</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Pacifico|Montserrat&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
 
-  <body>
-    <header class="header">
-      <h1 class="header__title">Foodify</h1>
-      <form id="mainForm" class="header__form" action="submit">
-        <input
-          id="searchInput"
-          type="text"
-          class="header__input"
-          type="search"
-          placeholder="find your recipe"
-          aria-label="Search"
-        />
-        <select class="header__select" name="results" id="resultsNumber">
-          <option value="5">5</option>
-          <option value="10" selected>10</option>
-          <option value="15">15</option>
-          <option value="25">25</option>
-        </select>
-        <button class="header__btn" type="submit">Find recipes</button>
-      </form>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>foodify - best recipes</title>
+  <link href="https://fonts.googleapis.com/css?family=Pacifico|Montserrat&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
 
-    <main class="main">
-      <div>
-        <ul id="resultsList"></ul>
-      </div>
+<body>
+  <header class="header">
+    <h1 class="header__title">Foodify</h1>
+    <form id="mainForm" class="header__form" action="submit">
+      <input id="searchInput" type="text" class="header__input" type="search" placeholder="find your recipe"
+        aria-label="Search" />
+      <select class="header__select" name="results" id="resultsNumber">
+        <option value="5">5</option>
+        <option value="10" selected>10</option>
+        <option value="15">15</option>
+        <option value="25">25</option>
+      </select>
+      <button class="header__btn" type="submit">Find recipes</button>
+    </form>
+  </header>
 
-      <div id="recipeBox"></div>
-    </main>
-    <footer class="footer">
-      <span
-        >Designed with
-        <a
-          class="footer__link"
-          href="https://spoonacular.com/food-api"
-          target="_blank"
-          >Spoonacular API</a
-        ></span
-      >
-      <span>2019 &copy Piotr Grzymowicz & Tomasz Ziółkowski</span>
-      <a href="mailto:tomzio@icloud.com" class="footer__link"
-        >tomzio@icloud.com</a
-      >
-      <a href="mailto:piotr.grzymowicz1@gmail.com" class="footer__link"
-        >piotr.grzymowicz1@gmail.com</a
-      >
-    </footer>
+  <main class="main">
+    <div>
+      <ul id="resultsList"></ul>
+    </div>
 
-    <script src="dist/bundle.js"></script>
-  </body>
+    <div id="recipeBox"></div>
+    <div id="recipeDetails"></div>
+
+  </main>
+  <footer class="footer">
+    <span>Designed with
+      <a class="footer__link" href="https://spoonacular.com/food-api" target="_blank">Spoonacular API</a></span>
+    <span>2019 &copy Piotr Grzymowicz & Tomasz Ziółkowski</span>
+    <a href="mailto:tomzio@icloud.com" class="footer__link">tomzio@icloud.com</a>
+    <a href="mailto:piotr.grzymowicz1@gmail.com" class="footer__link">piotr.grzymowicz1@gmail.com</a>
+  </footer>
+
+  <script src="dist/bundle.js"></script>
+</body>
+
 </html>

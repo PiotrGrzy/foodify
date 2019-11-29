@@ -1,6 +1,7 @@
 import "@babel/polyfill";
 import viewRecipes from "./viewRecipes";
 import viewRecipe, { clearRecipeView } from "./viewRecipe";
+import { clearDetails } from "./viewNutritions";
 
 const apiKey = "341d33626f6f4b33a6b63ab33d23cb72";
 let searchQuery = "";
@@ -11,7 +12,9 @@ const searchForm = document.querySelector("#mainForm");
 const searchInput = document.querySelector("#searchInput");
 const resultsNumberSelect = document.querySelector("#resultsNumber");
 const resultsList = document.querySelector("#resultsList");
+const recipeBox = document.querySelector("#recipeBox");
 
+// Fetch list of recipes
 const getRecipes = async () => {
   try {
     const response = await fetch(
@@ -24,10 +27,11 @@ const getRecipes = async () => {
   }
 };
 
+//Fetch single recipe info
 const getRecipe = async id => {
   try {
     const response = await fetch(
-      `https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}&includeNutrition=false`
+      `https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}&includeNutrition=true`
     );
     const data = await response.json();
     return data;
@@ -36,19 +40,23 @@ const getRecipe = async id => {
   }
 };
 
+// Form submit handler
 const onSubmit = async e => {
   e.preventDefault();
   if (searchInput.value !== "") {
+    // Get recipes with query and number of results
     searchQuery = searchInput.value;
     numberOfResults = resultsNumberSelect.value;
     results = await getRecipes();
-
+    // Reset results
     viewRecipes(results);
     clearRecipeView();
+    clearDetails();
     searchInput.value = "";
   }
 };
 
+// List click handler
 const onListClick = async e => {
   if (e.target.closest("li").tagName === "LI") {
     const recipeId = e.target.closest("li").dataset.id;
@@ -58,4 +66,5 @@ const onListClick = async e => {
 };
 
 resultsList.addEventListener("click", onListClick);
+recipeBox.addEventListener("click", () => getNutrition(singleRecipe));
 searchForm.addEventListener("submit", onSubmit);
