@@ -1,5 +1,5 @@
-$font-prim: "Montserrat", sans-serif;
-$font-sec: "Pacifico", cursive;
+$font-prim: 'Montserrat', sans-serif;
+$font-sec: 'Pacifico', cursive;
 
 $color-dark: rgb(43, 43, 43);
 $color-light: rgb(240, 240, 240);
@@ -17,25 +17,64 @@ $shadow: 0 0 5px 10px rgba(0, 0, 0, 0.2);
 html {
   font-size: 62.5%; //1rem
   position: relative;
-  @media screen and (max-width: "1140px") {
+  @media screen and (max-width: '1140px') {
     font-size: 50%;
   }
-  @media screen and (max-width: "900px") {
+  @media screen and (max-width: '900px') {
     font-size: 40%;
   }
 }
 
 body {
-  background: url("https://blackrockdigital.github.io/startbootstrap-new-age/img/bg-pattern.png"),
+  background: url('https://blackrockdigital.github.io/startbootstrap-new-age/img/bg-pattern.png'),
     linear-gradient(to left, #7b4397, #dc2430);
   background-color: rgba(0, 0, 0, 0);
   background-position-x: 0%, 0%;
   background-position-y: 0%, 0%;
   background-repeat: repeat, repeat;
   background-attachment: scroll, scroll;
-  background-image: url("https://blackrockdigital.github.io/startbootstrap-new-age/img/bg-pattern.png"),
+  background-image: url('https://blackrockdigital.github.io/startbootstrap-new-age/img/bg-pattern.png'),
     linear-gradient(to left, rgb(123, 67, 151), rgb(220, 36, 48));
   background-size: auto, auto;
   background-origin: padding-box, padding-box;
   background-clip: border-box, border-box;
+}
+
+.loader {
+  display: none;
+}
+.spinner,
+.spinner:after {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+}
+.spinner {
+  margin: 60px auto;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-left: 1.1em solid #ffffff;
+
+  transform: translateZ(0);
+
+  animation: load8 1.1s infinite linear;
+}
+
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
