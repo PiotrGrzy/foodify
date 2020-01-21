@@ -32,11 +32,13 @@ const getRecipes = async () => {
 
 //Fetch single recipe info
 const getRecipe = async id => {
+  loader.style.display = 'block';
   try {
     const response = await fetch(
       `https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}&includeNutrition=true`
     );
     const data = await response.json();
+    loader.style.display = 'none';
     return data;
   } catch (err) {
     err => console.log(err);

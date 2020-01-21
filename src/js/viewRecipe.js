@@ -4,7 +4,7 @@ const recipeBox = document.querySelector('#recipeBox');
 
 export const clearRecipeView = () => {
   recipeBox.innerHTML = '';
-  recipeBox.classList.remove('main__single-recipe');
+  recipeBox.classList.remove('single-recipe');
 };
 
 const viewRecipe = recipe => {
