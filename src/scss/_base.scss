@@ -6,6 +6,13 @@ $color-light: rgb(240, 240, 240);
 
 $shadow: 0 0 5px 10px rgba(0, 0, 0, 0.2);
 
+@mixin background {
+  background-color: $color-light;
+  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 2rem;
+}
+
 *,
 *::before,
 *::after {
@@ -65,10 +72,10 @@ body {
 
   transform: translateZ(0);
 
-  animation: load8 1.1s infinite linear;
+  animation: load 1.1s infinite linear;
 }
 
-@keyframes load8 {
+@keyframes load {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
